@@ -1,0 +1,97 @@
+/* Alap */
+body {
+    margin: 0;
+    background: #0d0d0d;
+    color: #e0e0e0;
+    font-family: "Arial", sans-serif;
+}
+
+/* Header */
+header {
+    background: #111;
+    color: #97ff5c;
+    padding: 25px;
+    text-align: center;
+    font-size: 1.8rem;
+    letter-spacing: 1px;
+    border-bottom: 2px solid #2a2a2a;
+}
+
+/* Szövegblokk */
+.gallery-section {
+    max-width: 1200px;
+    margin: 40px auto;
+    padding: 0 20px;
+}
+
+.gallery-section h2 {
+    text-align: center;
+    color: #97ff5c;
+    margin-bottom: 20px;
+}
+
+/* GRID */
+.gallery {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(3, 1fr);
+}
+
+@media (max-width: 900px) {
+    .gallery { grid-template-columns: repeat(2, 1fr); }
+}
+@media (max-width: 600px) {
+    .gallery { grid-template-columns: 1fr; }
+}
+
+/* Kártya */
+.card {
+    background: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+    box-shadow: 0 3px 10px rgba(0, 255, 0, 0.1);
+}
+
+.card img {
+    width: 100%;
+    height: auto;
+}
+
+.card h3 {
+    margin: 15px;
+    color: #97ff5c;
+}
+
+.card p {
+    margin: 0 15px 20px 15px;
+    color: #cccccc;
+}
+
+/* Gomb */
+.btn {
+    margin: 0 15px 15px 15px;
+    padding: 10px 15px;
+    background: #2c7e32;
+    color: white;
+    border-radius: 8px;
+    text-align: center;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.btn:hover {
+    background: #47b84f;
+}
+
+/* Hover animációk */
+.card:hover {
+    transform: translateY(-10px) scale(1.03);
+    background: #262626;
+    box-shadow: 0 10px 30px rgba(151, 255, 92, 0.2);
+}
